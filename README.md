@@ -68,17 +68,17 @@ erc-8232/
 │   └── erc-8232.md             # Core interface spec (registry-style, minimal)
 ├── implementations/
 │   ├── registry/               # Simple, default implementation (optional)
-│   │   ├── ERC8232Registry.vy
+│   │   ├── CORE_ERC-8232.vy
 │   │   └── test/
+|   |
 │   └── vault/                  # ← YOUR CODE GOES HERE
 │       ├── Agency.vy           # Your proxy contract
 │       ├── README.md           # User notes
-|       ├── Factory.vy          # Your factory contract
-│       └── test/               # Tests for vault pattern
+│       └── Factory.vy          # Your factory contract
 |
-├── scripts/
-│   ├── deploy_factory.py       # Ape/Brownie deploy script
-│   └── demo_interaction.py     # Example: owner grants → agent executes
+├── scripts/ 
+│   └── deploy_factory.py       # Ape/Brownie deploy script
+|
 ├── test/                       # Foundry/Ape tests (shared or per-impl)
 ├── audits/                     # Future: security notes, audit reports
 └── LICENSE                     # CC0 or MIT

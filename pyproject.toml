@@ -5,7 +5,6 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
-    "ape>=0.4.0",
     "ape-avalanche>=0.8.1",
     "ape-vyper>=0.8.10",
 ]
