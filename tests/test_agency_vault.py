@@ -192,3 +192,7 @@ def test_permission_bit_off():
         proxy.performAgencyAction(mock_rwa, 0, calldata, sender=agent)
 
     assert "Permission Bit Off".lower() in str(exc_info.value).lower()
+
+
+
+# Result: 4/5 passed, 1 failed (time window violation)
