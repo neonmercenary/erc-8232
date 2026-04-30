@@ -63,22 +63,25 @@ If an agent attempts to call a function not mapped to their active bits, the tra
 
 ```
 erc-8232/
-├── contracts/           # Core ERC-8232 implementation
-│   └── ERC_8232.vy
-|   ├── 8232Factory.vy
-|   └── Agency.vy
+├── README.md                    # One-pager: what, why, how to use
+├── spec/
+│   └── erc-8232.md             # Core interface spec (registry-style, minimal)
+├── implementations/
+│   ├── registry/               # Simple, default implementation (optional)
+│   │   ├── ERC8232Registry.vy
+│   │   └── test/
+│   └── vault/                  # ← YOUR CODE GOES HERE
+│       ├── Agency.vy           # Your proxy contract
+│       ├── README.md           # User notes
+|       ├── Factory.vy          # Your factory contract
+│       └── test/               # Tests for vault pattern
 |
-├── implementation/      # Registry and vault contracts
-│   ├── registry/
-│   │   └── ERC_8232.vy
-│   └── vault/
-│       ├── 8232Factory.vy
-|       ├── proxy_spec.md
-│       └── Agency.vy
-├── tests/              # Test suite
-├── scripts/            # Deployment and utility scripts
-├── spec/               # Specification documents
-└── ape-config.yaml     # Ape framework configuration
+├── scripts/
+│   ├── deploy_factory.py       # Ape/Brownie deploy script
+│   └── demo_interaction.py     # Example: owner grants → agent executes
+├── test/                       # Foundry/Ape tests (shared or per-impl)
+├── audits/                     # Future: security notes, audit reports
+└── LICENSE                     # CC0 or MIT
 ```
 
 ## Installation
