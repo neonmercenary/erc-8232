@@ -55,9 +55,8 @@ If an agent attempts to call a function not mapped to their active bits, the tra
 
 ## Architecture
 
-- **`SettledFactory.vy`:** Deploys individual, immutable proxies for users.
-- **`SettledProxy.vy`:** The enforcement engine that holds assets and validates agent calldata.
-- **`MCP Server`:** The bridge that allows AI agents to "cook" valid calldata and submit it to the proxy.
+- **`Factory.vy`:** Deploys individual, immutable proxies for users.
+- **`Proxy.vy`:** The enforcement engine that holds assets and validates agent calldata.
 
 ### Directory Structure
 
